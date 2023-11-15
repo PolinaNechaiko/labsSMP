@@ -1,29 +1,14 @@
+# Importing the ShapeInterface class from the Lb5.Interface module
 from Lb5.Interface import ShapeInterface
 
-
+# Class for running the program and interacting with the user
 class Runner:
     def __init__(self):
+        # Initializing an instance of the ShapeInterface
         self.interface = ShapeInterface()
 
-    def run(self):
-        while True:
-            print("\n----- Menu -----")
-            print("1. Create Cube")
-            print("2. Create Pyramid")
-            print("3. Exit")
-
-            choice = input("Enter your choice (1-3): ")
-
-            if choice == '1':
-                self.interface.create_cube()
-            elif choice == '2':
-                self.interface.create_pyramid()
-            elif choice == '3':
-                print("Exiting the program. Goodbye!")
-                break
-            else:
-                print("Invalid choice. Please enter a number from 1 to 3.")
-
+    # Main entry point of the program
 if __name__ == "__main__":
+    # Creating an instance of the Runner class and running the program
     runner = Runner()
     runner.run()
